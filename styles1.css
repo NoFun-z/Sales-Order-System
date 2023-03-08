@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic&display=swap');
+/*'Noto Sans Ethiopic', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Noto Sans Ethiopic', sans-serif;
+}
+
+.wrap{
+    display: flex;
+    position: relative;
+}
+
+.wrap .verticalbar{
+    position:absolute;
+    width: 200px;
+    height: 100%;
+    background: #4b4276;
+  
+}
+
+.wrap .verticalbar h2{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wrap .verticalbar ul li{
+    padding: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(225,225,225,0.05)
+}
+
+.wrap .verticalbar ul li a{
+    color: #fff;
+    display: block;
+}
+
+.wrap .verticalbar ul li a .fa{
+    width: 25px;
+}
+
+.wrap .verticalbar ul li:hover{
+    background: #594f8d;
+}
+
+.wrap .verticalbar ul li:hover a{
+    color: #fff;
+}
+
+.wrap .principal-content{
+    width: 100%;
+    padding-left: 5%;
+    background: #c4bbf1;
+}
+.wrap .principal-content2{
+    width: 45%;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 50px;
+    background: #c4bbf1;
+    color: #717171;
+    border-bottom: 1px solid #e0e4e8;
+}
+.wrap .principal-content .header{
+    padding: 10px;
+    background: #fff;
+    color: #717171;
+    border-bottom: 1px solid #e0e4e8;
+}
+.wrap .principal-content2 .header{
+    padding: 50px;
+    background: #fff;
+    color: #717171;
+    border-bottom: 1px solid #e0e4e8;
+}
+
+.wrap .principal-content .info{
+    margin:20px;
+    color: #717171;
+    line-height: 25px;
+}
+.wrap .principal-content .info div{
+    margin-bottom: 20px;
+}
+
+.wrap .principal-content2 .info{
+    margin:20px;
+    color: #717171;
+    line-height: 25px;
+}
+.wrap .principal-content2 .info div{
+    margin-bottom: 20px;
+}
+/*----------------------------------------------------*/
+/* HOME */
+header h1{
+    color: rgb(0, 0, 0);
+    font-size: 20;
+    font-style: italic;
+    font-weight: 100;
+    display: inline-block;
+    position: relative;
+    bottom: 50px;
+}
+
+
+.logo  {
+    margin-left:0;
+    width: 7%;
+   display: inline-block;
+}
+body{
+
+    background: #f3f5f9;
+}
+
+
+
+
+footer {
+    background-color:#ccc;
+    clear: inline-End;
+    color:#333;
+    padding: 3em 0;
+    
+    text-align: center;
+    position: relative;
+}
+
+
+h2 {
+   
+    font-weight: 400;
+    margin: 0 0 1em;
+}
+
+
+.homeimg{
+    align-items: center;
+    margin-bottom: 1.5em;
+    position: relative;
+    border-radius: 180px;
+    opacity: 0.6;
+}
+ 
+
+
+/*FIN HOME*/
+
+/*FORM SALES*/
+
+
+table, th, td 
+{
+    border: solid 5px #ddd;
+    border-collapse: collapse;
+    padding: 2px 3px;
+    text-align: center;
+}
+th { 
+    font-weight:bold;
+    background-color:#c4bbf1;
+    color: black;
+}
+
+
+input[type="text"],input[type="number"],input[type="email"]{
+    width:50%;
+    padding:12px 20px;
+    margin:8px 0;
+    
+    display:block;
+    border: 1px solid rgb(165,161,161);
+    border-radius: 4px;
+}
+ /*Buttons SUBMIT and RESET*/
+ 
+input[type="submit"],input[type="reset"], input[type="button"]{
+    background: #594f8d;
+    color: #fff;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    background: #7163b6;
+}
+
+
+input[type="reset"]:hover{
+    background: #7163b6;
+}
+
+button{
+    background: #eee;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+.OrderedInvItem h1{
+    
+        color: rgb(0, 0, 0);
+        font-size: 60px;
+        font-style: italic;
+        font-weight: 100;
+        display: inline-block;
+        position: relative;
+        bottom: 60px;
+    
+
+}
+
+.form-control-sales {
+    margin-bottom: 2.5px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.form-control-sales label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control-sales i {
+    position: absolute;
+    top: 48px;
+    right: 300px;
+    visibility: hidden;
+}
+
+.form-control-sales.success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control-sales.error i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+
+
+samp {
+    background-color: #ededed;
+    border: 2px solid #ededed;
+    border-radius: 0.2em;
+    margin-left: 0.15em;
+    margin-right: 0.05em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    word-break: break-word;
+  }
+
+
+
+.form-control-sales small{
+    visibility: hidden;
+    position: absolute;
+    bottom: -10px;
+    left: 4px;
+}
+
+.form-control-sales.success small{
+    color: #2ecc71;
+}
+
+.form-control-sales.error small{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+
+.form-control-sales.success input{
+    border-color: #2ecc71;
+}
+
+.form-control-sales.error input{
+    border-color: #e74c3c;
+}
+
+/*Footer*/
+
+.footerpos{
+    display: inline-flex;
+}
+
+
+.homeimg{
+    align-items: center;
+    margin-bottom: 1.5em;
+    position:relative;
+    width: 23px;
+    margin-left: 8px;
+    border-radius: 180px;
+    opacity: 0.6;
+}
+
+.form-control-modify {
+    margin-bottom: 2.5px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.form-control-modify label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control-modify i {
+    position: absolute;
+    top: 52px;
+    right: 320px;
+    visibility: hidden;
+}
+
+.form-control-modify.success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control-modify.error i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control-modify small{
+    visibility: hidden;
+    position: absolute;
+    bottom: -10px;
+    left: 4px;
+}
+
+.form-control-modify.success small{
+    color: #2ecc71;
+}
+
+.form-control-modify.error small{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+
+.form-control-modify.success input{
+    border-color: #2ecc71;
+}
+
+.form-control-modify.error input{
+    border-color: #e74c3c;
+}

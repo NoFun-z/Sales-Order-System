@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        
+    
+    
+        <link rel="stylesheet" href="styles.css" id="light" media="">
+        <link rel="stylesheet" href="Report.css" id="lighty" media="">
+        <link rel="stylesheet" href="Darkmode.css" id="Dark" media="none">
+        <link rel="stylesheet" href="SaturatedMode.css" id="satu" media="none">
+        <link rel="icon" href="images/logo2.png">
+        <script src="https://kit.fontawesome.com/d6651eddd0.js" crossorigin="anonymous"></script>
+        <title>Reports</title>
+    </head>
+
+
+<body>
+    <header id="blog-hero">
+        <div id="divUser" class="aux">
+            <a href="index.html" id="OutLog"><strong>Logout</strong></a>
+            <label id="User"><strong>/   #Admin</strong></label>        </div>
+        <div class="aux">
+            <input type="button" style="margin-left: 15px;" id="Changecolor" value="Change Color Mode" onclick="ChangeMode()">
+        </div>
+        <nav class="navbar navbar-dark bg" id="navBar" aria-label="Light offcanvas navbar">
+            <div class="container-fluid">
+                <img class="logo" id="logoImg" style="border-radius: 50%;" src="images/logo.png" width="100" alt="logo LACC">
+                <a class="navbar-brand" href="#">Reports</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarLight"
+                    aria-labelledby="offcanvasNavbarLightLabel">
+    
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+    
+                    <div class="offcanvas-body">
+    
+                        <ul class="navbar-nav justify-content-end flex-grow-1 ">
+                            <li class="nav-item active">
+                                <a class="nav-link active" aria-current="page" href="home.html"><img
+                                        src="images/Home/home.png" width="20" alt="logo sales"> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="sales.html"><img src="images/Sales/price-tag-white.png"
+                                        width="20" alt="logo sales"> Sales</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="Customer.html"><img src="images/Customer/customer-little.png"
+                                        width="20" alt="logo Customer"> Customer</a>
+                            </li>
+                            <li class="nav-item" id="invdiv">
+                                <a class="nav-link " href="inv.html" id="invSide"><img src="images/Inventory/folder.png" width="20"
+                                        alt="logo Inventory Management"> Inventory Management</a>
+                            </li>
+                            <li class="nav-item" id="supDiv">
+                                <a class="nav-link" href="supModify.html" id="supSide"><img src="images/Supplier/delivery-box.png"
+                                        width="20" alt="logo Supplier"> Supplier</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="orders.html"><img src="images/Orders/tracking-small.png" width="20"
+                                        alt="logo Orders"> Orders</a>
+                            </li>
+                            <li class="nav-item" id="repDiv">
+                                <a class="nav-link" href="Report.html" id="repSide"><img src="images/reports/white-sales.png" width="20"
+                                        alt="Report"> Reports</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav> 
+    </header>
+    
+    <main>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Reports</li>
+            </ol>
+          </nav>
+
+        <p class="help-label">(*) For additional help, click the Check Box</p>
+        <p style="display: inline-block; margin-left: 3%; margin-top: 2%;">Report Selected: </p>&nbsp
+        <p id="SelectedReport" style="display: inline-block;"></p>
+        <div class="report-wrap">
+        <div class="report-general">
+            <div class="report-margin">
+                <div class="grid-report">
+                    <div class="report-buttons">
+                        <button onclick="LoginTable()">Login History</button>
+                    </div>
+                    <div class="report-checkbox">
+                        <input type="checkbox"  id="Login_help" name="searchhelp"  onclick="ShowHideLoginHelp()">
+                    </div>
+                    <div class="report-label">
+                        <label id="lblLogin" class="lblhelp" style="display: none"><small>Look for employee login history</small></label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="report-margin">
+                <div class="grid-report">
+                    <div class="report-buttons">
+                        <button onclick=" GetCustomerReport()">Customer</button>
+                    </div>
+                    <div class="report-checkbox">
+                        <input type="checkbox"  id="customer_help" name="searchhelp"  onclick="ShowHideCustomerHelp()">
+                    </div>
+                    <div class="report-label">
+                        <label id="lblcustomer" class="lblhelp" style="display: none"><small>Look for customers registered in your system</small></label>
+                    </div>
+                </div>
+            </div>
+            <div class="report-margin">
+                <div class="grid-report">
+                    <div class="report-buttons">
+                        <button onclick="invReport()">Inventory</button>
+                    </div>
+                    <div class="report-checkbox">
+                        <input type="checkbox"  id="inventory_help" name="searchhelp"  onclick="ShowHideInventoryHelp()">
+                    </div>
+                    <div class="report-label">
+                        <label id="lblinventory" class="lblhelp" style="display: none"><small>Look for records of items in stock</small></label>
+                    </div>
+                </div>
+            </div>
+            <div class="report-margin">
+                <div class="grid-report">
+                    <div class="report-buttons">
+                        <button onclick="GetOrderReport()">Orders</button>
+                    </div>
+                    <div class="report-checkbox">
+                        <input type="checkbox"  id="order_help" name="searchhelp"  onclick="ShowHideOrderHelp()">
+                    </div>
+                    <div class="report-label">
+                        <label id="lblorder" class="lblhelp" style="display: none"><small>Look for records of orders</small></label>
+                    </div>
+                </div>
+            </div>
+            <div class="report-margin">
+                <div class="grid-report">
+                    <div class="report-buttons">
+                        <button onclick="getAllReport()">All</button>
+                    </div>
+                    <div class="report-checkbox">
+                        <input type="checkbox"  id="all_help" name="searchhelp"  onclick="ShowHideAllHelp()">
+                    </div>
+                    <div class="report-label">
+                        <label id="lblall" class="lblhelp" style="display: none"><small>Create a record of all above</small></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="reportForm" class="textArea" style="width: 100%;">
+            <div id="spanDisplay">
+                <span style="display: block; margin-left: 30%; margin-top: 20%;">No Report Data to Show, please pick a report ...</span>
+            </div>
+            <div id="CustReport_Options" style="display: none;">
+                <div style="margin-left: 17%; display: inline-block;">
+                    <label for="cust_ReportOptions" class="Add_Help">Customer Orders</label>&nbsp
+                    <input type="checkbox" style="width: 22px; height: 22px;" id="Customer_Order" name="cust_ReportOptions"  onclick="COGenerateTable()">
+                </div>
+                <div style="margin-left: 5%; display: inline-block;">
+                    <label for="cust_ReportOptions" class="Add_Help">Most Purchased Item</label>&nbsp
+                    <input type="checkbox" style="width: 22px; height: 22px;" id="Customer_Order2" name="cust_ReportOptions"  onclick="GetCustomerReport2()">
+                </div>
+            </div>
+<!---/////////////////////ORDER REPORT////////////////////////-->
+                 <div id="OrderReport_Options" style="display: none;">
+                    <div style="margin-left: 17%; display: inline-block;">
+                        <label for="Order_ReportOptions" class="Add_Help">Order History</label>&nbsp
+                        <input type="checkbox" style="width: 22px; height: 22px;" id="Order_RO" name="Order_ReportOptions"  onclick="ROGenerateTable()">
+                    </div>
+                    <div style="margin-left: 5%; display: inline-block;">
+                        <label for="Order_ReportOptions" class="Add_Help">Order logs</label>&nbsp
+                        <input type="checkbox" style="width: 22px; height: 22px;" id="Order_RO2" name="Order_ReportOptions"  onclick="GetOrderReport2()">
+                    </div>
+                </div>        
+            <div name="printForm" id="printForm">
+                <div id="textReport" style="display: none;">
+                    <textarea id="txtReport" style="width: 300px; height: 180px; display: inline-block; margin-left: 20%; line-height: 110%;"></textarea>
+                    <textarea id="txtReport2" style="width: 280px; height: 180px; display: inline-block; margin-left: 1%; line-height: 110%;"></textarea></br>
+                    <textarea id="txtReport3" style="width: 300px; height: 180px; display: inline-block; margin-left: 20%; line-height: 110%;"></textarea>
+                    <textarea id="txtReport4" style="width: 280px; height: 180px; display: inline-block; margin-left: 1%; line-height: 110%;"></textarea></br>
+                </div>
+                <div id="COtablediv" style="margin-left: 20%; margin-top: 1%; display: none;">
+                    <input type="text" placeholder="Search customer" id="search_CO" style="width: 150px;" onkeyup="filteredAllCO()"></br>          
+                    <table id="cust_OrderR">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>OrdDate</th>
+                                <th>Items</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="4"><i>Loading...</i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="pagingCO">
+                        <input id="COPrevPage" style="margin-left: 7%;" type="button" value="Previous">
+                        <label id="CopageNum"><strong>1</strong></label>
+                        <input id="CONextPage" type="button" value="Next">
+                    </div>
+                </div>
+                <div id="MPIdiv" style="margin-left: 20%; margin-top: 1%; display: none;">
+                    <div style="display: inline-block;">
+                        <label>Most Purchased Item</label></br>
+                        <input type="text" id="MostPItem" name="MostPItem" readonly style="width: 150px;"></br>
+                    </div>      
+                    <div style="display: inline-block; margin-left: 1%;">
+                        <label>#Purchased</label></br>
+                        <input type="text" id="APurchased" name="APurchased" readonly style="width: 60px;"></br>
+                    </div>
+                    <div style="display: inline-block; margin-left: 6%;">
+                        <div style="display: inline-block;">
+                            <label>Honorable Customer</label></br>
+                            <input type="text" id="HoCust" name="HoCust" readonly style="width: 150px;"></br>
+                        </div>
+                        <div style="display: inline-block;">
+                            <label>#Amount</label></br>
+                            <input type="text" id="AmountP" name="AmountP" readonly style="width: 60px;"></br>
+                        </div>
+                    </div>  
+                    <div style="margin-top: 3%; display: block;">
+                        <input type="text" placeholder="Search items" id="search_MI" style="width: 100px;" onkeyup="filteredAllMI()"></br>   
+                        <table id="Item_Invens">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="4"><i>syncing...</i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="pagingMI" style="margin-left: 0.2%;">
+                        <input id="IPrevPage" type="button" value="Back">
+                        <label id="IpageNum"><strong>1</strong></label>
+                        <input id="INextPage" type="button" value=">">
+                    </div>  
+                </div>
+<!--/////////////////ORDER REPORT FORM///////////////-->
+                <div id="ORtablediv" style="margin-left: 20%; margin-top: 1%; display: none;">
+                    <input type="text" placeholder="Search Order" id="search_OR" style="width: 150px;" onkeyup="filteredAllRO()"></br>          
+                    <table id="OR_OrderR">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>OrdDate</th>
+                                <th>Total</th>
+                                <th>Items</th>
+                                <th>#Ordered</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="4"><i>Loading...</i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="pagingRO">
+                        <input id="ROPrevPage" style="margin-left: 7%;" type="button" value="Previous">
+                        <label id="ROpageNum"><strong>1</strong></label>
+                        <input id="RONextPage" type="button" value="Next">
+                    </div>
+                </div>
+                <div id="ROlogdiv" style="margin-left: 20%; margin-top: 1%; display: none;">
+                    <div style="display: inline-block;">
+                        <label>Most Purchased Item</label></br>
+                        <input type="text" id="MostPOItem" name="MostPItem" readonly style="width: 150px;"></br>
+                    </div>      
+                    <div style="display: inline-block; margin-left: 1%;">
+                        <label>#Purchased</label></br>
+                        <input type="text" id="OAPurchased" name="APurchased" readonly style="width: 60px;"></br>
+                    </div>
+                    <div style="display: inline-block; margin-left: 6%;">
+                        <div style="display: inline-block;">
+                            <label>#1 Supplier</label></br>
+                            <input type="text" id="OrdCust" name="HoCust" readonly style="width: 150px;"></br>
+                        </div>
+                        <div style="display: inline-block;">
+                            <label>#Items bought</label></br>
+                            <input type="text" id="OAmountP" name="AmountP" readonly style="width: 60px;"></br>
+                        </div>
+                    </div>  
+                </div>
+                <div id="LOGtablediv" style="margin-left: 20%; margin-top: 1%; display: none;">
+                    <div>
+                        <label><strong>Select employee: </strong></label>
+                        <input autocomplete="on" list="empList" onkeyup="filteredAllLOG()" placeholder="Search name" id="empNameSelected"
+                            name="empNameSelected"><br>
+                        <datalist id="empList">
+                        </datalist>
+                    </div>
+                        <table id="logs_report">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Date</th>
+                                    <th>LogIn</th>
+                                    <th>LogOut</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="4"><i>Loading...</i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="pagingLOG" style="margin-left: 0.2%;">
+                            <input id="LPrevPage" type="button" value="Back">
+                            <label id="LpageNum"><strong>1</strong></label>
+                            <input id="LNextPage" type="button" value="Next">
+                        </div> 
+                    </div>
+                
+                    <div>
+                        <button id="Print_report" style="width: 120px; height: 50px; margin-left: 20%; margin-bottom: 4%; display: none;" onclick="">Print report</button>
+                    </div>
+            </div> 
+        </div>
+            </div>
+    
+    
+    </main>
+
+    <footer>
+        <div class="footerpos">
+            <p>LACC Studios&copy; 2022   </p>
+            <img class = "homeimg" src="images/logo2.png" alt="logo2 LACC">
+
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous">
+    </script>
+    <script  src="js/script.js"></script>
+    <script  src="js/Report.js"></script>
+    <script  src="js/changeColor.js"></script>
+    <script  src="js/showReport.js"></script>
+    <script  src="js/userChargeChange.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    
+
+</body>
+
+
+</html>

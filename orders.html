@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="styles.css" id="light" media="">
+    <link rel="stylesheet" href="Darkmode.css" id="Dark" media="none">
+    <link rel="stylesheet" href="SaturatedMode.css" id="satu" media="none">
+    <link rel="icon" href="images/logo2.png">
+    <script src="https://kit.fontawesome.com/d6651eddd0.js" crossorigin="anonymous"></script>
+    <title>Orders</title>
+</head>
+
+<body onload="ChangeMode(); FillUl();">
+
+    <header id="blog-hero">
+        <div id="divUser" class="aux">
+            <a href="index.html" id="OutLog"><strong>Logout</strong></a>
+            <label id="User"><strong>/   #Admin</strong></label>
+        </div>
+        <div class="aux">
+            <input type="button" style="margin-left: 15px;" id="Changecolor" value="Change Color Mode" onclick="ChangeMode()">
+        </div>
+        <nav class="navbar navbar-dark bg" id="navBar" aria-label="Light offcanvas navbar">
+            <div class="container-fluid">
+                <img class="logo" src="images/logo.png" id="logoImg" style="border-radius: 50%;" width="100" alt="logo LACC">
+                <a class="navbar-brand" href="#">Orders</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarLight"
+                    aria-labelledby="offcanvasNavbarLightLabel">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+
+                        <ul class="navbar-nav justify-content-end flex-grow-1 ">
+                            <li class="nav-item active">
+                                <a class="nav-link active" aria-current="page" href="home.html"><img
+                                        src="images/Home/home.png" width="20" alt="logo sales"> Home</a>
+                            </li>
+                            <li class="nav-item" id="saleDiv">
+                                <a class="nav-link " href="sales.html" id="saleSide"><img src="images/Sales/price-tag-white.png"
+                                        width="20" alt="logo sales"> Sales</a>
+                            </li>
+                            <li class="nav-item" id="custDiv">
+                                <a class="nav-link " href="Customer.html" id="custSide"><img src="images/Customer/customer-little.png"
+                                        width="20" alt="logo Customer"> Customer</a>
+                            </li>
+                            <li class="nav-item" id="invdiv">
+                                <a class="nav-link " href="inv.html" id="invSide"><img src="images/Inventory/folder.png" width="20"
+                                        alt="logo Inventory Management"> Inventory Management</a>
+                            </li>
+                            <li class="nav-item" id="supDiv">
+                                <a class="nav-link" href="supModify.html" id="supSide"><img src="images/Supplier/delivery-box.png"
+                                        width="20" alt="logo Supplier"> Supplier</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="orders.html"><img src="images/Orders/tracking-small.png" width="20"
+                                        alt="logo Orders"> Orders</a>
+                            </li>
+                            <li class="nav-item" id="repDiv">
+                                <a class="nav-link" href="Report.html" id="repSide"><img src="images/reports/white-sales.png" width="20"
+                                        alt="Report"> Reports</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Orders</li>
+            </ol>
+        </nav>            
+
+
+    <div class="principal-content">
+        <div class="header">
+            <div class="info">
+                <div class="bodies">
+                    <div class="dropdownlist">
+                        <h1>
+                            Search By
+                        </h1><br>
+                        <select name="cars" id="Omenuid" onclick="showorders()" style="  background-color: #4CAF50;
+                        color: white;
+                        padding: 8px;
+                        font-size: 16px;
+                        border: none;
+                        cursor: pointer;
+                        width: 70px;">
+                        </select>
+                    </div>
+                    <div class="txtarea">
+                    <textarea id="txtOrders" readonly></textarea>
+                        <div class="formOrd">
+                            <form action="orderprint.html">
+                            <button class="submitbtn" onclick="passordervalue()">Print</button>
+                            </form>
+                            <form>
+                            <button class="submitbtn">Reset</button>
+                            </form>
+                        </div>
+                    </div>  
+                </div>
+                
+            </div>
+        </div>
+             
+    </div>
+    </main>
+
+    
+
+    <footer>
+        <div class="footerpos">
+            <p>LACC Studios&copy; 2022   </p>
+            <img class = "homeimg" src="images/logo2.png" alt="logo2 LACC">
+
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+     <script type="text/javascript" src="js/changeColor.js"></script>
+     <script type="text/javascript" src="js/userChargeChange.js"></script>
+</body>
+</html>
