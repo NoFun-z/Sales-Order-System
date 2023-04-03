@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="styles.css" id="light" >
+    <link rel="stylesheet" href="Darkmode.css" id="Dark" >
+    <link rel="stylesheet" href="SaturatedMode.css" id="satu" >
+    <link rel="icon" href="images/logo2.png">
+    <script src="https://kit.fontawesome.com/d6651eddd0.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+
+<body onload="ChangeMode()">
+
+    <header id="blog-hero">
+        <div id="divUser" class="aux">
+            <a href="index.html" id="OutLog"><strong>Logout</strong></a>
+            <label id="User"><strong>/   #Admin</strong></label>
+        </div>
+        <div class="aux">
+            <input type="button" style="margin-left: 15px;" id="Changecolor" value="Change Color Mode"
+                onclick="ChangeMode()">
+        </div>
+        <nav class="navbar navbar-dark bg" id="navBar" 
+            aria-label="Light offcanvas navbar">
+
+            <div class="container-fluid">
+                <img class="logo" src="images/logo.png" width="100" alt="logo LACC" id="logoImg"
+                    style="border-radius: 50%;">
+                <a class="navbar-brand" href="#">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarLight"
+                    aria-labelledby="offcanvasNavbarLightLabel">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+
+                        <ul class="navbar-nav justify-content-end flex-grow-1 ">
+                            <li class="nav-item active">
+                                <a class="nav-link active" aria-current="page" href="home.html"><img
+                                        src="images/Home/home.png" width="20" alt="logo sales"> Home</a>
+                            </li>
+                            <li class="nav-item" id="saleDiv">
+                                <a class="nav-link " href="sales.html" id="saleSide"><img src="images/Sales/price-tag-white.png"
+                                        width="20" alt="logo sales"> Sales</a>
+                            </li>
+                            <li class="nav-item" id="custDiv">
+                                <a class="nav-link " href="Customer.html" id="custSide"><img src="images/Customer/customer-little.png"
+                                        width="20" alt="logo Customer"> Customer</a>
+                            </li>
+                            <li class="nav-item" id="invdiv">
+                                <a class="nav-link " href="inv.html" id="invSide"><img src="images/Inventory/folder.png" width="20"
+                                        alt="logo Inventory Management"> Inventory Management</a>
+                            </li>
+                            <li class="nav-item" id="supDiv">
+                                <a class="nav-link" href="supModify.html" id="supSide"><img src="images/Supplier/delivery-box.png"
+                                        width="20" alt="logo Supplier"> Supplier</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="orders.html"><img src="images/Orders/tracking-small.png" width="20"
+                                        alt="logo Orders"> Orders</a>
+                            </li>
+                            <li class="nav-item" id="repDiv">
+                                <a class="nav-link" href="Report.html" id="repSide"><img src="images/reports/white-sales.png" width="20"
+                                        alt="Report"> Reports</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>       
+        
+        <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item active" aria-current="page">Home</li>
+                </ol>
+        </nav>
+
+        
+
+        <div class="principal-content">
+           
+            <div class="info">
+                <div class="welcome">
+                    <h2>Welcome!</h2>
+                    <p>Hi There!
+                        We are LACC, the group of programmers who are doing the page you are using. We are
+                        pleased to know we are a big help for the company allowing them to progress faster than
+                        usual.
+                    </p><br>
+                </div>
+
+                <div class="small-columns">
+                    <a href="sales.html" id="salesLink">
+                        <div class="border">
+                            <br>
+                            <img src="images/Sales/price-tag-black.png" id="saleImg" alt="logo Sales">
+                            <br><br>
+                            <h2 class="subtitle"> Sales</h2>
+                            <p class="paragraph-welcome-page">You place a sale, put the details.</p>
+                            <br>
+                        </div>
+                    </a>
+
+                    <a href="Customer.html" id="customerLink">
+                        <div class="border">
+                            <br>
+                            <img src="images/Customer/customer.png" id="custImg" alt="logo Customer">
+                            <br>
+                            <h2 class="subtitle"> Customer</h2>
+                            <p class="paragraph-welcome-page">Can see the Table of customers and create new customers
+                            </p>
+                        </div>
+                    </a>
+
+                    <a href="inv.html" id="invLink">
+                        <div class="border">
+                            <br>
+                            <img src="images/Inventory/folderBig.png" width="98" id="folderImg" alt="logo Inventory">
+
+                            <h2 class="subtitle"> Inventory Management</h2>
+                            <p class="paragraph-welcome-page">Products willing to sell. You can see the inventory
+                                details.</p>
+                        </div>
+                    </a>
+
+                    <a href="supModify.html" id="supLink">
+                        <div class="border">
+                            <br>
+                            <img src="images/Supplier/delivery-box-big.png" id="supImg" alt="logo Supplier">
+
+                            <h2 class="subtitle"> Supplier</h2>
+                            <p class="paragraph-welcome-page">See which supplier is needed and create a new supplier.
+                            </p>
+                        </div>
+                    </a>
+
+                    <a href="orders.html" id="ordLink">
+                        <div class="border">
+                            <br>
+                            <img src="images/Orders/tracking.png" id="orderImg" alt="logo Orders">
+
+                            <h2 class="subtitle"> Orders</h2>
+                            <p class="paragraph-welcome-page">You can see how many orders are. </p>
+                            <br>
+                        </div>
+                    </a>
+
+                    <a href="Report.html" id="repLink">
+                        <div class="border">
+                            <br>
+                            <img src="images/reports/sales.png" id="reportImg" style="width: 128px; height: 128px;" alt="logo Reports">
+
+                            <h2 class="subtitle"> Reports</h2>
+                            <p class="paragraph-welcome-page">Look for the records of your database</p>
+                            <br>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerpos">
+            <p class="text-footer">LACC Studios&copy; 2022 </p>
+            <img class="homeimg" src="images/logo2.png" alt="logo2 LACC">
+
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+        </script>
+    <script  src="js/changeColor.js"></script>
+    <script  src="js/userChargeChange.js"></script>
+</body>
+
+</html>

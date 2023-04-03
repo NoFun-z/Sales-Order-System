@@ -1,0 +1,556 @@
+{
+  "inv": [
+    {
+      "Code": "A4SW6645",
+      "Item": "Nut",
+      "QuantityInStock": 20,
+      "Price": 0.5
+    },
+    {
+      "Code": "POI7896AS",
+      "Item": "Oil",
+      "QuantityInStock": 12,
+      "Price": 13.5
+    },
+    {
+      "Code": "PA5485APE",
+      "Item": "Blade",
+      "QuantityInStock": 7,
+      "Price": 30
+    },
+    {
+      "Code": "LLAI78AWJIOIA",
+      "Item": "Wheel",
+      "QuantityInStock": 50,
+      "Price": 10
+    },
+    {
+      "Code": "QQISOW78975",
+      "Item": "Recoil Starter",
+      "QuantityInStock": 3,
+      "Price": 80
+    },
+    {
+      "Code": "WQEIJ4542",
+      "Item": "Bolt",
+      "QuantityInStock": 150,
+      "Price": 0.02
+    },
+    {
+      "Code": "TTPOASD78555",
+      "Item": "Belt",
+      "QuantityInStock": 40,
+      "Price": 15
+    },
+    {
+      "Code": "QWEASCSCQWE123",
+      "Item": "Motor",
+      "QuantityInStock": 10,
+      "Price": 100
+    },
+    {
+      "Code": "PQEWSDNOWQ45648",
+      "Item": "Gas canister",
+      "QuantityInStock": 65,
+      "Price": 10
+    },
+    {
+      "Code": "MONASDBIWI45628",
+      "Item": "Spark plug",
+      "QuantityInStock": 43,
+      "Price": 5
+    },
+    {
+      "Code": "CNSAIDWB1238",
+      "Item": "Fan",
+      "QuantityInStock": 78,
+      "Price": 7.25
+    },
+    {
+      "Code": "VBNIKPQ1232",
+      "Item": "Gas valve",
+      "QuantityInStock": 12,
+      "Price": 30
+    },
+    {
+      "Code": "CNSAhwu38238",
+      "Item": "Extension Cords",
+      "QuantityInStock": 128,
+      "Price": 3.25
+    },
+    {
+      "Code": "CNSAmfie4329",
+      "Item": "Ladders",
+      "QuantityInStock": 18,
+      "Price": 50.25
+    },
+    {
+      "Code": "WKFIIDWB4329",
+      "Item": "Measuring Tape",
+      "QuantityInStock": 103,
+      "Price": 4.5
+    },
+    {
+      "Code": "LFPEIDWB4723",
+      "Item": "Power Drill",
+      "QuantityInStock": 37,
+      "Price": 23.75
+    },
+    {
+      "Code": "SMERADWB1238",
+      "Item": "Basic Toolkit",
+      "QuantityInStock": 38,
+      "Price": 10.35
+    },
+    {
+      "Code": "CHSMEDWB4868",
+      "Item": "Hand Saw",
+      "QuantityInStock": 19,
+      "Price": 27.8
+    },
+    {
+      "Code": "LQOIWDWB1578",
+      "Item": "Wheelbarrow",
+      "QuantityInStock": 34,
+      "Price": 37.25
+    },
+    {
+      "Code": "SHOVILEB6434",
+      "Item": "Shovel",
+      "QuantityInStock": 53,
+      "Price": 17
+    },
+    {
+      "Code": "ACPRSOWB4632",
+      "Item": "Air Compressor",
+      "QuantityInStock": 21,
+      "Price": 237.45
+    },
+    {
+      "Code": "BSAAIDWB1238",
+      "Item": "Belt Sander",
+      "QuantityInStock": 13,
+      "Price": 95.99
+    },
+    {
+      "Code": "CNSFGODA4538",
+      "Item": "Work Bench",
+      "QuantityInStock": 9,
+      "Price": 368.85
+    },
+    {
+      "Code": "CNAFWDW21238",
+      "Item": "Bench Vise",
+      "QuantityInStock": 24,
+      "Price": 46
+    },
+    {
+      "Code": "CARJIDCA1518",
+      "Item": "Car Jack",
+      "QuantityInStock": 16,
+      "Price": 416.55
+    },
+    {
+      "Code": "RACAIDHE1246",
+      "Item": "Ratchets",
+      "QuantityInStock": 42,
+      "Price": 41.25
+    },
+    {
+      "Code": "FUNLIDWB9541",
+      "Item": "Funnel",
+      "QuantityInStock": 69,
+      "Price": 13.45
+    }
+  ],
+  "Provider": [
+    {
+      "Name": "Canadian Tire",
+      "PartsAndPrices": [
+        {
+          "Part": "Nut",
+          "Price": 0.01
+        },
+        {
+          "Part": "Blade",
+          "Price": 20
+        }
+      ]
+    },
+    {
+      "Name": "HomeHardware",
+      "PartsAndPrices": [
+        {
+          "Part": "Bolt",
+          "Price": 0.1
+        },
+        {
+          "Part": "Belt",
+          "Price": 10
+        },
+        {
+          "Part": "Recoil starter",
+          "Price": 50
+        },
+        {
+          "Part": "Oil",
+          "Price": 5
+        }
+      ]
+    },
+    {
+      "Name": "Home Depot",
+      "PartsAndPrices": [
+        {
+          "Part": "Nut",
+          "Price": 0.2
+        },
+        {
+          "Part": "Wheel",
+          "Price": 6
+        },
+        {
+          "Part": "Blade",
+          "Price": 30
+        }
+      ]
+    },
+    {
+      "Name": "Lowes",
+      "PartsAndPrices": [
+        {
+          "Part": "Motor",
+          "Price": 80
+        },
+        {
+          "Part": "Gas canister",
+          "Price": 7.4
+        },
+        {
+          "Part": "Spark plug",
+          "Price": 2.8
+        },
+        {
+          "Part": "Fan",
+          "Price": 4.75
+        },
+        {
+          "Part": "Recoil Starter",
+          "Price": 68.5
+        },
+        {
+          "Part": "Power Drill",
+          "Price": 19.5
+        }
+      ]
+    },
+    {
+      "Name": "Menards",
+      "PartsAndPrices": [
+        {
+          "Part": "Spark plug",
+          "Price": 4.2
+        },
+        {
+          "Part": "Fan",
+          "Price": 5.3
+        },
+        {
+          "Part": "Extension Cords",
+          "Price": 2.75
+        },
+        {
+          "Part": "Ladders",
+          "Price": 42.75
+        },
+        {
+          "Part": "Measuring Tape",
+          "Price": 3.6
+        },
+        {
+          "Part": "Power Drill",
+          "Price": 19.65
+        },
+        {
+          "Part": "Basic Toolkit",
+          "Price": 10
+        },
+        {
+          "Part": "Shovel",
+          "Price": 12.45
+        },
+        {
+          "Part": "Gas valve",
+          "Price": 24
+        },
+        {
+          "Part": "Oil",
+          "Price": 4
+        },
+        {
+          "Part": "Wheel",
+          "Price": 7
+        }
+      ]
+    },
+    {
+      "Name": "True Value",
+      "PartsAndPrices": [
+        {
+          "Part": "Ratchets",
+          "Price": 34.8
+        },
+        {
+          "Part": "Funnel",
+          "Price": 8.75
+        },
+        {
+          "Part": "Car Jack",
+          "Price": 350
+        },
+        {
+          "Part": "Work Bench",
+          "Price": 315
+        },
+        {
+          "Part": "Air Compressor",
+          "Price": 200
+        },
+        {
+          "Part": "Belt Sander",
+          "Price": 75
+        }
+      ]
+    },
+    {
+      "Name": "ILDC",
+      "PartsAndPrices": [
+        {
+          "Part": "Bench Vise",
+          "Price": 39
+        },
+        {
+          "Part": "Funnel",
+          "Price": 10
+        },
+        {
+          "Part": "Car Jack",
+          "Price": 380
+        },
+        {
+          "Part": "Work Bench",
+          "Price": 340
+        },
+        {
+          "Part": "Shovel",
+          "Price": 50
+        },
+        {
+          "Part": "Wheelbarrow",
+          "Price": 28
+        },
+        {
+          "Part": "Hand Saw",
+          "Price": 21.5
+        }
+      ]
+    },
+    {
+      "Name": "Ace Hardware",
+      "PartsAndPrices": [
+        {
+          "Part": "Gas valve",
+          "Price": 25
+        },
+        {
+          "Part": "Gas canister",
+          "Price": 7.5
+        },
+        {
+          "Part": "Blade",
+          "Price": 21
+        },
+        {
+          "Part": "Bolt",
+          "Price": 0.01
+        },
+        {
+          "Part": "Ladders",
+          "Price": 41
+        },
+        {
+          "Part": "Basic Toolkit",
+          "Price": 8.25
+        },
+        {
+          "Part": "Air Compressor",
+          "Price": 199
+        }
+      ]
+    }
+  ],
+  "Orders": [
+    {
+      "USP": 1,
+      "CustName": "Charles White",
+      "EmpName": "Wendy",
+      "Price": 25.5,
+      "Items": [
+        {
+          "Quantity": 2,
+          "Name": "Wheel"
+        },
+        {
+          "Quantity": 11,
+          "Name": "Nut"
+        }
+      ]
+    },
+    {
+      "USP": 2,
+      "CustName": "John Brown",
+      "EmpName": "William",
+      "Price": 30,
+      "Items": [
+        {
+          "Quantity": 1,
+          "Name": "Blade"
+        }
+      ]
+    }
+  ],
+  "Customers":[
+    {
+      "ID":1,
+      "firstName":"John",
+      "lastName":"White",
+      "Phone":"(365)-789-1234",
+      "email":"jWhite@gmail.com",
+      "province":"Ontario",
+      "city":"Tillsonburg",
+      "street":"3364 9th Avenue",
+      "postal":"N4G 4H2"
+    },
+    {
+      "ID":2,
+      "firstName":"Walter",
+      "lastName":"Graaff",
+      "Phone":"(289)-654-7894",
+      "email":"wGraff@gmail.com",
+      "province":"British Columbia",
+      "city":"Vernon",
+      "street":"173 Coldstream Avenue",
+      "postal":"V1T 6N1"
+    },
+    {
+      "ID":3,
+      "firstName":"Kris",
+      "lastName":"Barker",
+      "Phone":"(250)-262-1770",
+      "email":"KrisBa@gmail.com",
+      "province":" Ontario",
+      "city":"Toronto",
+      "street":"1397 Glen Long Avenue",
+      "postal":"M6B 1J8"
+    },
+    {
+      "ID":4,
+      "firstName":"Loc",
+      "lastName":"Pham",
+      "Phone":"(289)-969-1827",
+      "email":"okayimfine@gmail.com",
+      "province":"Alberta",
+      "city":"Edmonton",
+      "street":"4267 184th Street",
+      "postal":"T5J 2R4"
+    },
+    {
+      "ID":5,
+      "firstName":"Haroon",
+      "lastName":"Decker",
+      "Phone":"(905)-548-5435",
+      "email":"HarDeck@gmail.com",
+      "province":"Alberta",
+      "city":"Edmonton",
+      "street":"368 184th Street",
+      "postal":"T5J 2R4"
+    },
+    {
+      "ID":6,
+      "firstName":"Carlos",
+      "lastName":"Gilbert",
+      "Phone":"(403)-297-7537",
+      "email":"Carlos40@gmail.com",
+      "province":"Alberta",
+      "city":"Granum",
+      "street":"1169 Port Washington Road",
+      "postal":"T0L 1A0"
+    },
+    {
+      "ID":7,
+      "firstName":"Rikki",
+      "lastName":"Ward",
+      "Phone":"(905)-906-9580",
+      "email":"RikkiWa@gmail.com",
+      "province":"Ontario",
+      "city":"Newmarket",
+      "street":"2360 Leslie Street",
+      "postal":"L3Y 2A3"
+    },
+    {
+      "ID":8,
+      "firstName":"Sanjeev",
+      "lastName":"Camacho",
+      "Phone":"(613)-565-4183",
+      "email":"SanJeeCama@gmail.com",
+      "province":"Quebec",
+      "city":"Montreal",
+      "street":"2784 rue de la Gauchetière",
+      "postal":"H3B 2M3"
+    },
+    {
+      "ID":9,
+      "firstName":"Yosef",
+      "lastName":"Mcmillan",
+      "Phone":"(604)-374-2810",
+      "email":"YoseMcMil@gmail.com",
+      "province":"Prince Edward Island",
+      "city":"Tignish",
+      "street":"721 Church Street",
+      "postal":"C0B 2B0"
+    },
+    {
+      "ID":10,
+      "firstName":"Korban",
+      "lastName":"Ellis",
+      "Phone":"(604)-649-2213",
+      "email":"KorbanElli@gmail.com",
+      "province":"Saskatchewan",
+      "city":"Lake Alma",
+      "street":"4646 St. John Street",
+      "postal":"S4P 3Y2"
+    },
+    {
+      "ID":11,
+      "firstName":"Reegan",
+      "lastName":"Morley",
+      "Phone":"(416)-824-1839",
+      "email":"ReeMorley@gmail.com",
+      "province":"Prince Edward Island",
+      "city":"Freetown",
+      "street":"3263 Kelvin Road",
+      "postal":"C0B 1L0"
+    },
+    {
+      "ID":12,
+      "firstName":"Zeynep",
+      "lastName":"Oconnell",
+      "Phone":"(418)-210-8735",
+      "email":"ZeZakConell@gmail.com",
+      "province":"British Columbia",
+      "city":"Freetown",
+      "street":"4904 Carlson Road",
+      "postal":"V2L 5E5"
+    }
+  ]
+}

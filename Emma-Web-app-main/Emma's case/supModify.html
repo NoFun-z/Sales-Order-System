@@ -1,0 +1,234 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" id="light" >
+    <link rel="stylesheet" href="Darkmode.css" id="Dark" >
+    <link rel="stylesheet" href="SaturatedMode.css" id="satu" >
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="icon" href="images/logo2.png">
+    <script src="https://kit.fontawesome.com/d6651eddd0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script> -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <title>Supplier</title>
+</head>
+
+<body onload="SupGenerateTable(); ChangeMode();">
+
+    <header id="blog-hero">
+        <div id="divUser" class="aux">
+            <a href="index.html" id="OutLog"><strong>Logout</strong></a>
+            <label id="User"><strong>/   #Admin</strong></label>
+        </div>
+        <div class="aux">
+            <input type="button" style="margin-left: 15px;" id="Changecolor" value="Change Color Mode"
+                onclick="ChangeMode()">
+        </div>
+        <nav class="navbar navbar-dark bg" id="navBar" aria-label="Light offcanvas navbar">
+            <div class="container-fluid">
+                <img class="logo" src="images/logo.png" style="border-radius: 50%;" id="logoImg" width="100" alt="logo LACC">
+                <a class="navbar-brand" href="#">Supplier</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarLight"
+                    aria-labelledby="offcanvasNavbarLightLabel">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+
+                        <ul class="navbar-nav justify-content-end flex-grow-1 ">
+                            <li class="nav-item active">
+                                <a class="nav-link active" aria-current="page" href="home.html"><img
+                                        src="images/Home/home.png" width="20" alt="logo sales"> Home</a>
+                            </li>
+                            <li class="nav-item" id="saleDiv">
+                                <a class="nav-link " href="sales.html" id="saleSide"><img src="images/Sales/price-tag-white.png"
+                                        width="20" alt="logo sales"> Sales</a>
+                            </li>
+                            <li class="nav-item" id="custDiv">
+                                <a class="nav-link " href="Customer.html" id="custSide"><img src="images/Customer/customer-little.png"
+                                        width="20" alt="logo Customer"> Customer</a>
+                            </li>
+                            <li class="nav-item" id="invdiv">
+                                <a class="nav-link " href="inv.html" id="invSide"><img src="images/Inventory/folder.png" width="20"
+                                        alt="logo Inventory Management"> Inventory Management</a>
+                            </li>
+                            <li class="nav-item" id="supDiv">
+                                <a class="nav-link" href="supModify.html" id="supSide"><img src="images/Supplier/delivery-box.png"
+                                        width="20" alt="logo Supplier"> Supplier</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="orders.html"><img src="images/Orders/tracking-small.png" width="20"
+                                        alt="logo Orders"> Orders</a>
+                            </li>
+                            <li class="nav-item" id="repDiv">
+                                <a class="nav-link" href="Report.html" id="repSide"><img src="images/reports/white-sales.png" width="20"
+                                        alt="Report"> Reports</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Supplier</li>
+            </ol>
+        </nav>
+        <div class="wrap">
+        <div class="principal-content">
+            <div class="header">
+                <div class="info">
+                    <div>
+                        <input type="button" style="margin-left: 2%" name="Add New Supplier" id="Add_Supplier" value="Add New Supplier" onclick="ShowSupplierForm()"><br><br>
+                    </div>
+                    <form class= "form1" id="suppForm" autocomplete="off" onsubmit="">
+                        <div style="display: inline-block; width: 50%; margin-left: 2%;">
+                            <div class="form-control-modify">
+                                <label for="supplierName">Supplier Name</label>
+                                <p class="input-hint">
+                                    Example: <samp>Giant Tiger</samp>.
+                                <input type="text" name="supplierName" id="supplierName">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+                            <div class="form-control-modify">
+                                <label for="product">Product Name</label>
+                                <p class="input-hint">
+                                    Example: <samp >Almond</samp>.
+                                <input type="text" name="product" id="product">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+                            <div class="form-control-modify">
+                                <label for="perPrice">Price</label>
+                                <p class="input-hint">
+                                    Example: <samp >9.99</samp>.
+                                <input type="number" name="perPrice" id="perPrice" min="0">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+                        </div>
+    
+                        <div class="form_action--button" style="margin-left: 2%;">
+                            <input type="submit" value="Add">
+                            <input type="reset" value="Clear and Return" onclick="resetForm()">
+                            
+                        </div>
+                    </form>
+                    <form style="display: inline-block; margin-left: 2%;">
+                        <div class="Search">
+                            <input type="text" style="width: 300px; display: inline-block;" placeholder="search by Supplier Name" id="searchbarSupName"
+                                onkeyup="filteredAll()">&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="number" style="width: 300px; display: inline-block;" placeholder="search by Price" id="searchbarSupPrice" min="0"
+                                onclick="filteredAll()">&nbsp;
+                                <label for="Spprice_help" class="Add_Help">Help?</label>
+                                <input type="checkbox" class="Add_Help" name="searchhelp" id="Spprice_help"
+                                    style="width: 20px; Height: 20px" onclick="ShowHideSpPriceHelp()">
+                                <label id="LblSpPrice" class="Add_Help2"><small>Enter the maximum price</small></label><br>            
+                                <input type="text" style="width: 300px; display: inline-block;" placeholder="search by Parts" id="searchbarSupParts"
+                                onkeyup="filteredAll()">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input class="btn btn-primary" id="supClear" type="reset" value="Clear Filter" onclick="ClearSupOrder()">
+                        </div>
+                            <div onclick="CalculateSelectedSup()">
+                                <table id="storeList">
+                                    <thead>
+                                        <tr>
+                                            <th><input id="allCheckeds" type="checkbox" onclick="CheckAlls()"></th>
+                                            <th>Provider Name</th>
+                                            <th>Part</th>
+                                            <th>Price</th>
+                                            <th>Sale Quantity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td colspan="4"><i>Loading...</i></td></tr>
+                                    </tbody>
+                                </table>
+                                <input id="SupbtnPrevPage" style="margin-left: 250px;" class="pagingBtn" type="button" value="Previous">
+                                <label id="SuppageNum" style="color: #000;"><strong>1</strong></label>
+                                <input id="SupbtnNextPage" type="button" class="pagingBtn" value="Next">
+                            </div>
+                    </form>
+                    
+                </div>                  
+            </div>     
+        </div>
+        <div class="principal-content2">
+            <form  style="display: inline-block;">
+                <div onclick="CalculateSelectedSup()">
+                    <div class="container2">
+                        <div class="Sup_submission">
+                            <label>Items Placed</label><br>
+                            <textarea name="Sup_Items" cols="40" rows="5" readonly id="Sup_Items"></textarea><br>
+    
+                            <label for="TotalSupPrice"><strong>Order Total: </strong>&nbsp;&nbsp;</label>
+                            <p id="TotalSupPrice">$0</p>
+                            <div id="Get_Order" style="display: inline-block;"><input type="button" value="Buy Parts" onclick="AddToInvent();"></div>
+                            <p id="Process_order" style="display: inline-block; margin-left: 5%;">Processing...</p>
+                            <div id="Submit_Confirm" style="margin-left: 55%; display: inline-block;">
+                                <a href="SupplierInvoice.html"><input type="button" value="Confirm Order" id="Sup_Submit" onclick="SupInvoice()"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+                <div id="AvailForm" style="display: inline-block; margin-right: 10%;">
+                    <p id="ItemAvail">Item Availability</p>
+                    <input type="text" style="width: 300px; display: inline-block;" placeholder="Number left on stock" readonly id="ItemOnStock">
+                </div>
+            </form>
+        </div>
+    </div>
+        <br>
+    <br>
+    </main>
+
+    <footer>
+        <div class="footerpos">
+            <p>LACC Studios&copy; 2022 </p>
+            <img class="homeimg" src="images/logo2.png" alt="logo2 LACC">
+
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <script  src="js/script3.js"></script>
+    <script  src="js/script5.js"></script>
+    <script  src="js/changeColor.js"></script>
+    <script  src="js/userChargeChange.js"></script>
+</body>
+</html>
